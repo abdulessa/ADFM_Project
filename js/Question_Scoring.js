@@ -83,6 +83,7 @@ function submit_answer(question) {
 		case 13:
 			if (Scores.Question_2 == null) {
 				Scores.Question_2 = validate_Q13();
+				// submission to DB here TODO:
 			}
 			break;
 		default:
