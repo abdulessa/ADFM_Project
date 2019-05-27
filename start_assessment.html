@@ -26,7 +26,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="index.html" class="nav-link">HOME</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
-        <li class="nav-item"><a href="start_assessment.html" class="nav-link">MoCA COGNITIVE ASSESSMENT</a></li>
+        <li class="nav-item"><a href="https://www.mocatest.org/" class="nav-link">MoCA COGNITIVE ASSESSMENT</a></li>
         <li class="nav-item"><a href="patient_form.html" class="nav-link">NEW PATIENT</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
         <li class="nav-item cta"><a href="register.html" class="nav-link"><span>SIGN UP!</span></a></li>
@@ -36,61 +36,22 @@
 </nav>
 <!-- END nav -->
 
-<div class="hero-wrap hero-wrap-2" style="background-image: url('images/pic1.jpg'); background-attachment:fixed;">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-      <div class="col-md-8 ftco-animate text-center">
-        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-        <h1 class="mb-3 bread">Contact Us</h1>
-      </div>
-    </div>
+<div class="col middle-page" align="center">
+  <p>Select Patient</p>
+  <div class="d-table-row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Patient</th>
+          <th scope="col">Start Assessment</th>
+        </tr>
+      </thead>
+      <tbody id="paitients_list">
+      </tbody>
+    </table>
   </div>
 </div>
-<section class="ftco-section contact-section ftco-degree-bg">
-  <div class="container">
-    <div class="row d-flex mb-5 contact-info">
-      <div class="col-md-12 mb-4">
-        <h2 class="h4">Contact Information</h2>
-      </div>
-      <div class="w-100"></div>
-      <div class="col-md-3">
-        <p><span>Address:</span> Jalan Universiti, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur </p>
-      </div>
-      <div class="col-md-3">
-        <p><span>Phone:</span> <a href="tel://1234567920">+ 60116400794</a></p>
-      </div>
-      <div class="col-md-3">
-        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@adfm.um.edu.my</a></p>
-      </div>
-      <div class="col-md-3">
-        <p><span>Website</span> <a href="#">adfm.um.edu.my</a></p>
-      </div>
-    </div>
-    <div class="row block-9">
-      <div class="col-md-6 pr-md-5">
-        <h4 class="mb-4">Do you have any questions?</h4>
-        <form action="#">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen">
@@ -115,6 +76,7 @@
 <script src="js/scrollax.min.js"></script> 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> 
 <script src="js/google-map.js"></script> 
-<script src="js/main.js"></script>
+<script src="js/main.js"></script> 
+<script src="js/start_assessment.js"></script>
 </body>
 </html>
