@@ -54,10 +54,10 @@ $sql = "INSERT INTO patient_form (name, gender, age, education, residence,
 
 		if(empty($name)){
 				echo "Username is not inserted";
-				header("refresh:3; url=index.html");
+				header("refresh:1; url=home.html");
 		}
 		elseif(mysqli_query($con, $sql)){
-			header("Location:index.html");
+			header("Location:home.html");
 		}
 		else{
 			echo "Failed to save";
