@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-US">
+<!-- Set page language-->
+<head>
+<meta charset="UTF-8">
+<title>Cognition Test</title>
+<link href="css/QuestionnaireStyle.css" rel="stylesheet" type="text/css">
+<!-- add the bootstrap and the css files-->
+<link href="css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-color: #F3FFF7">
+<!-- Set general custom BG color-->
+<div class="container-fluid">
+  <div class="row"> <!-- Nav bar -->
+    <div class="col-3" align="left"> <!-- left side -->
+      <a href="Home.html"><img src="css/images/SVG/HomeBtn.svg" alt="home_btn" id="home"> </a></div>
+    <div class="col-6" align="center"> <!-- middle --> 
+      RESULTS </div>
+    <div class="col-3 dropdown" align="right"> <!-- right side -->
+      
+      <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="langDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> EN </button>
+      <!-- Set page language dropdown menu-->
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">EN</button>
+        <button class="dropdown-item" type="button">MY</button>
+        <button class="dropdown-item" type="button">CH</button>
+      </div>
+      <button type="button" class="btn btn-primary" id="NextBtn">
+      <a href="Home.html">Next</a>
+      </button>
+    </div>
+  </div>
+  <div class="row" style="background-color: #F3FFF7"> <!-- Question row -->
+    <h4>Check if subject has less than 6 years of formal education.
+      <input type="checkbox">
+    </h4>
+  </div>
+  <!-- Question Contents -->
+  <div class="row" style="background-color: #F3FFF7">
+    <h3>Part A</h3>
+    <table class="table table-success">
+      <!-- the question needs a table, with 2 rows of checkboxes for each word column-->
+      <tbody>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Name</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Age</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Former Job</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Place of residence</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Chidren</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Ethnicity</th>
+          <td>--------------</td>
+        </tr>
+        <tr> <!-- Set words in column-->
+          <th scope="col">Language</th>
+          <td>--------------</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row" style="background-color: #F3FFF7">
+    <h3>Part B</h3>
+    <table class="table table-success">
+      <!-- the question needs a table, with 2 rows of checkboxes for each word column-->
+      <thead>
+      <th>Module</th>
+        <th>Question</th>
+        <th>Points</th>
+          </thead>
+      <tbody>
+        <tr>
+          <td>VISUOSPATIAL / EXECUTIVE</td>
+          <td>A- Numbering (V)<br>
+            B- Drawing Cube (V)<br>
+            C- Drawing Clock (E) </td>
+          <td> 0 / 1<br>
+            0 / 1<br>
+            0 / 3</td>
+        </tr>
+        <tr>
+          <td>NAMING</td>
+          <td>Name the Animals</td>
+          <td>0 / 3</td>
+        </tr>
+        <tr>
+          <td>MEMORY</td>
+          <td>A- 1st Trial<br>
+            B- 2nd Trial</td>
+          <td>- / -<br>
+            - / -</td>
+        </tr>
+        <tr>
+          <td>ATTENTION</td>
+          <td>A- Repeat Digits, Forward / Backward order<br>
+            B- Tap on <b>1</b><br>
+            C- Serial Decrease</td>
+          <td>0 / 2<br>
+            0 / 1<br>
+            0 / 3</td>
+        </tr>
+        <tr>
+          <td>LANGUAGE</td>
+          <td>A- Repeat<br>
+            B- Fluency</td>
+          <td>0 / 2<br>
+            0 / 1</td>
+        </tr>
+        <tr>
+          <td>ABSTRACTION</td>
+          <td>Repeat</td>
+          <td>0 / 2</td>
+        </tr>
+        <tr>
+          <td>DELAYED RECALL</td>
+          <td>Recall Words from Module 3<br>
+            Optional: A- Category Cue<br>
+            B- Multiple Choice Cue</td>
+          <td>0 / 5<br>
+            - / -<br>
+            - / -</td>
+        </tr>
+        <tr>
+          <td>ORIENTATION</td>
+          <td>Remember the Date</td>
+          <td>0 / 5</td>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+	<div class="row" style="background-color: #F3FFF7">
+    <h3>Total</h3>
+    <table class="table table-success">
+      <!-- the question needs a table, with 2 rows of checkboxes for each word column-->
+      <thead><th>Part A</th><th>Part B</th><th>Additional Points</th><th>Total</th></thead>
+		<tbody><td>0 / 10</td><td>0 / 30</td><td>+0</td><td>0 / 40</td></tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
