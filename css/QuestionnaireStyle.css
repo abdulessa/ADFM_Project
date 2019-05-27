@@ -1,13 +1,42 @@
 @charset "UTF-8";
 /*Main*/
-body{
- background-color: yellow;
-}
-#page_container{
+#body {
 	background-color: whitesmoke;
 }
-#question_title{
+#page_container {
 	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: whitesmoke;
+}
+#question_title {
+	padding-top: 20px;
+}
+.progress-bar {
+	width: 100%;
+}
+#question_title {
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-right: 30px;
+	background-color: #59A7FC;
+	color: #ECF9FF;
+	border-radius: 15px;
+}
+#question_content {
+	border-radius: 10px;
+	background-color: #DCECFF;
+	color: #353535;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 45px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+.hidden {
+	display: none;
 }
 /*Question-1*/
 .circle-border {
@@ -19,10 +48,28 @@ body{
 	position: absolute;
 }
 .circle-border:hover {
-	border: 8px solid green;
+	border: 8px solid #2F67F0;
+}
+.circle-border p {
+	margin-left: 1px;
+	margin-top: -2px;
+	font: bolder;
+	font-size: 40px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	color: black;
+}
+.circle-border p:hover {
+	color: #3857CE;
+}
+.circle-selected {
+	background-color: #1D1D9C;
+	border: 8px solid #00166F;
+}
+.circle-selected p {
+	color: lightblue;
 }
 .triangle {
-	position: relative;
+	position: absolute;
 	width: 0;
 	border-bottom: solid 75px black;
 	border-right: solid 50px transparent;
@@ -38,18 +85,7 @@ body{
 	border-left: solid 36px transparent;
 }
 .triangle:hover {
-	border-bottom: solid 75px green;
-}
-.circle-border p {
-	margin-left: 1px;
-	margin-top: -2px;
-	font: bolder;
-	font-size: 40px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
-	color: black;
-}
-.circle-border p:hover {
-	color: #60B043;
+	border-bottom: solid 75px #2F67F0;
 }
 .triangle .text {
 	margin-left: -12px;
@@ -62,29 +98,118 @@ body{
 	text-align: center;
 }
 .triangle .text:hover {
-	color: #60B043;
-}
-.circle-selected {
-	background-color: darkgreen;
-	border: 8px solid green;
-}
-.circle-selected p {
-	color: lightgreen;
+	color: #3857CE;
 }
 .triangle-selected {
-	border-bottom: solid 75px green;
+	border-bottom: solid 75px #00166F;
 }
 .triangle-selected .empty {
-	border-bottom: solid 56px darkgreen;
+	border-bottom: solid 56px #1D1D9C;
 }
 .triangle-selected .text {
-	color: lightgreen;
+	color: lightblue;
 }
 .circle-1 {
-	margin-left: 700px;
+	padding-left: 13px;
+	margin-left: 185px;
+	margin-top: 260px;
+}
+.circle-2 {
+	padding-left: 13px;
+	margin-left: 265px;
+	margin-top: 70px;
+}
+.circle-3 {
+	padding-left: 13px;
+	margin-left: 475px;
+	margin-top: 200px;
+}
+.circle-4 {
+	padding-left: 13px;
+	margin-left: 580px;
 	margin-top: 280px;
 }
+.circle-5 {
+	padding-left: 13px;
+	margin-left: 485px;
+	margin-top: 430px;
+}
+.circle-6 {
+	padding-left: 13px;
+	margin-left: 380px;
+	margin-top: 370px;
+}
+.circle-7 {
+	padding-left: 13px;
+	margin-left: 300px;
+	margin-top: 350px;
+}
+.circle-8 {
+	padding-left: 13px;
+	margin-left: 0px;
+	margin-top: 250px;
+}
+.circle-9 {
+	padding-left: 13px;
+	margin-left: 50px;
+	margin-top: 150px;
+}
+.circle-10 {
+	padding-left: 13px;
+	margin-left: 100px;
+	margin-top: 0px;
+}
+.circle-10 p {
+	margin-left: -10px;
+}
 .triangle-2 {
-	margin-left: -40px;
-	margin-top: -60px;
+	margin-left: 350px;
+	margin-top: 25px;
+}
+.triangle-3 {
+	margin-left: 480px;
+	margin-top: 70px;
+}
+.triangle-4 {
+	margin-left: 340px;
+	margin-top: 180px;
+}
+.triangle-5 {
+	margin-left: 520px;
+	margin-top: 340px;
+}
+.triangle-6 {
+	margin-left: 170px;
+	margin-top: 455px;
+}
+.triangle-7 {
+	margin-left: 50px;
+	margin-top: 450px;
+}
+.triangle-8 {
+	margin-left: 75px;
+	margin-top: 350px;
+}
+.triangle-9 {
+	margin-left: 115px;
+	margin-top: 180px;
+}
+.triangle-10 {
+	margin-left: 160px;
+	margin-top: 20px;
+}
+.triangle-10 .text {
+	margin-left: -23px;
+	margin-top: 10px;
+	font-size: 35px;
+}
+#Q1-Contents {
+	margin-left: 250px;
+	padding-bottom: 500px;
+}
+/*Question-5*/
+#Q5-tablerow {
+	padding-top: 20px;
+	background-color: aliceblue;
+	border-radius: 10px;
 }
