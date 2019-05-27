@@ -4571,6 +4571,17 @@ button.close {
   text-align: center;
   background-color: #000;
   border-radius: 0.25rem; }
+  .login {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -184px 0px 0px -155px;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+}
 
 .popover {
   position: absolute;
@@ -4910,6 +4921,8 @@ button.close {
       content: ""; }
   .carousel-indicators .active {
     background-color: #fff; }
+	
+	
 
 .carousel-caption {
   position: absolute;
