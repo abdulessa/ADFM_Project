@@ -4,11 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <title>MoCA Test</title>
-<link href="Part B - MoCA test/css/QuestionnaireStyle.css" rel="stylesheet" type="text/css">
+<link href="css/QuestionnaireStyle.css" rel="stylesheet" type="text/css">
 <!-- add the bootstrap and the css files-->
-<link href="Part B - MoCA test/css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+<!-- JQuery Library -->
 <script src="js/jquery-3.2.1.min.js"></script>
+<!-- JavaScript -->
 <script type="text/javascript" src="js/MoCA_TestManger.js"></script>
+<script type="text/javascript" src="js/Question_Scoring.js"></script>
 </head>
 <body id="body">
 <!-- Nav bar -->
@@ -17,7 +20,7 @@
     <ul class="navbar-nav mr-1">
       <!-- Left side -->
       <li class="nav-item">
-        <button class="btn btn-primary" type="submit">Back</button>
+        <button class="btn btn-primary" type="submit" id="Back_BTN" onclick="backQuestion()">Back</button>
       </li>
     </ul>
     <!-- Center side -->
@@ -27,7 +30,7 @@
     <ul class="navbar-nav">
       <!-- Right side -->
       <li class="nav-item">
-        <button class="btn btn-primary" type="submit">Next</button>
+        <button class="btn btn-primary" type="submit" id="Next_BTN"  onclick="nextQuestion()">Next</button>
       </li>
     </ul>
   </div>
@@ -42,8 +45,347 @@
     <h4>-</h4>
   </div>
   <!-- Question content -->
-  <div id="question_content">
-    <h1>-</h1>
+  <div id="question_content"> 
+    <!-- َQ1 -->
+    <div class="flex-row" id="Q1-Contents"> 
+      <!-- Circles -->
+      <div class="circle-border circle-1 circle-selected" id="C-1">
+        <p>1</p>
+      </div>
+      <div class="circle-border circle-2" id="C-2" onclick="select_circle(2)">
+        <p>2</p>
+      </div>
+      <div class="circle-border circle-3 circle-selected" id="C-3">
+        <p>3</p>
+      </div>
+      <div class="circle-border circle-4" id="C-4" onclick="select_circle(4)">
+        <p>4</p>
+      </div>
+      <div class="circle-border circle-5" id="C-5" onclick="select_circle(5)">
+        <p>5</p>
+      </div>
+      <div class="circle-border circle-6" id="C-6" onclick="select_circle(6)">
+        <p>6</p>
+      </div>
+      <div class="circle-border circle-7" id="C-7" onclick="select_circle(7)">
+        <p>7</p>
+      </div>
+      <div class="circle-border circle-8" id="C-8" onclick="select_circle(8)">
+        <p>8</p>
+      </div>
+      <div class="circle-border circle-9" id="C-9" onclick="select_circle(9)">
+        <p>9</p>
+      </div>
+      <div class="circle-border circle-10" id="C-10" onclick="select_circle(10)">
+        <p>10</p>
+      </div>
+      <!-- Triangles -->
+      <div class="triangle triangle-2 triangle-selected" id="T-2">
+        <div class="empty">
+          <div class="text">2</div>
+        </div>
+      </div>
+      <div class="triangle triangle-3" id="T-3" onclick="select_triangle(3)">
+        <div class="empty">
+          <div class="text">3</div>
+        </div>
+      </div>
+      <div class="triangle triangle-4" id="T-4" onclick="select_triangle(4)">
+        <div class="empty">
+          <div class="text">4</div>
+        </div>
+      </div>
+      <div class="triangle triangle-5" id="T-5" onclick="select_triangle(5)">
+        <div class="empty">
+          <div class="text">5</div>
+        </div>
+      </div>
+      <div class="triangle triangle-6" id="T-6" onclick="select_triangle(6)">
+        <div class="empty">
+          <div class="text">6</div>
+        </div>
+      </div>
+      <div class="triangle triangle-7" id="T-7" onclick="select_triangle(7)">
+        <div class="empty">
+          <div class="text">7</div>
+        </div>
+      </div>
+      <div class="triangle triangle-8" id="T-8" onclick="select_triangle(8)">
+        <div class="empty">
+          <div class="text">8</div>
+        </div>
+      </div>
+      <div class="triangle triangle-9" id="T-9" onclick="select_triangle(9)">
+        <div class="empty">
+          <div class="text">9</div>
+        </div>
+      </div>
+      <div class="triangle triangle-10" id="T-10" onclick="select_triangle(10)">
+        <div class="empty">
+          <div class="text">10</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- َQ2 -->
+    <div align="center" id="Q2-Contents">
+      <div class="row"> <img src="images/PNG/Cube.png" class="rounded mx-auto d-block" alt="Cube_Q2"> </div>
+      <!-- Required image -->
+      <div class="row"> <!-- File "answer" upload section -->
+        <div class="btn btn-dark float-left file-field btn-lg col" align="center"> Choose file
+          <input type="file">
+          <input type="checkbox" id="Q2_mark">
+        </div>
+      </div>
+    </div>
+    
+    <!-- َQ3 -->
+    <div align="center" id="Q3-Contents">
+      <div class="row"> <!-- File "answer" upload section -->
+        <div class="btn btn-dark float-left file-field btn-lg col"> Choose file
+          <input type="file">
+          <div>
+            <input type="checkbox" id="Q3_Contour">
+            Contour </div>
+          <div>
+            <input type="checkbox" id="Q3_Numbers">
+            Numbers </div>
+          <div>
+            <input type="checkbox" id="Q3_Hands">
+            Hands </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- َQ4 -->
+    <div align="center" id="Q4-Contents">
+      <div class="row" style="margin-top: 50px;"> <!-- Page contents --> <!-- The question needs 3 pics to be clearly seen -->
+        <div class="col"><img class="rounded" src="images/PNG/lion.png" alt="home_btn" style="width: 100%"></div>
+        <div class="col"><img src="images/PNG/elephant.png" alt="home_btn" style="width: 100%"></div>
+        <div class="col"><img src="images/PNG/camel.png" alt="home_btn" style="width: 100%"></div>
+      </div>
+      <div class="row"> <!-- checkbox for each picture-->
+        <div class="col" align="center">
+          <input type="checkbox" id="Q4_lion">
+        </div>
+        <div class="col" align="center">
+          <input type="checkbox" id="Q4_elephant">
+        </div>
+        <div class="col" align="center">
+          <input type="checkbox" id="Q4_camel">
+        </div>
+      </div>
+    </div>
+    
+    <!-- َQ5 -->
+    <div align="center" id="Q5-Contents">
+      <div class="row" id="Q5-tablerow"> <!-- page contents-->
+        <table class="table">
+          <!-- the question needs a table, with 2 rows of checkboxes for each word column-->
+          <thead>
+            <tr> <!-- Set words in column-->
+              <th scope="col"></th>
+              <th scope="col">Face</th>
+              <th scope="col">Silk</th>
+              <th scope="col">Church</th>
+              <th scope="col">Rose</th>
+              <th scope="col">Red</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr> <!-- first checkboxes row-->
+              <th scope="row">1st trial</th>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+            </tr>
+            <tr> <!-- second checkboxes row-->
+              <th scope="row">2nd trial</th>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+              <td><input type="checkbox"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- َQ6 -->
+    <div align="center" id="Q6-Contents">
+      <table class="table table-primary">
+        <tbody>
+          <tr>
+            <th scope="row" style="font-size: 20px;text-align: center">Forward order</th>
+            <td style="font-size: 30px;text-align: left">2, 1, 8, 5, 4</td>
+            <td><input type="checkbox" id="Q6_forward_order"></td>
+          </tr>
+          <tr>
+            <th scope="row" style="font-size: 20px;text-align: center">Backward order</th>
+            <td style="font-size: 30px;text-align: left">7, 4, 2</td>
+            <td><input type="checkbox" id="Q6_backward_order"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- َQ7 -->
+    <div align="center" id="Q7-Contents">
+      <div class="col-10" align="left" style="font-size: 30px; font-style: oblique;"><b>6, 2, 1, 3, 7, 8, 1, 1, 9, 7, 6, 2, 1, 6, 1, 7, 4, 5, 1, 1, 1, 9, 1, 7, 9, 6, 1, 1, 2.</b> </div>
+      <div class="col-3" align="center">
+        <input type="checkbox" id="Q7_mark">
+      </div>
+    </div>
+    
+    <!-- َQ8 -->
+    <div align="center" id="Q8-Contents">
+      <table class="table table-primary">
+        <tbody>
+          <tr>
+            <td style="font-size: 30px;text-align: center"><b>93</b></td>
+            <td><input type="checkbox" id ="Q8_1stSubstract"></td>
+            <td style="font-size: 30px;text-align: center"><b>86</b></td>
+            <td><input type="checkbox" id ="Q8_2ndSubstract"></td>
+            <td style="font-size: 30px;text-align: center"><b>79</b></td>
+            <td><input type="checkbox" id ="Q8_3rdSubstract"></td>
+            <td style="font-size: 30px;text-align: center"><b>72</b></td>
+            <td><input type="checkbox" id ="Q8_4thSubstract"></td>
+            <td style="font-size: 30px;text-align: center"><b>65</b></td>
+            <td><input type="checkbox" id ="Q8_5thSubstract"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- َQ9 -->
+    <div align="center" id="Q9-Contents">
+      <div class="col-12">
+        <table class="table table-primary">
+          <tbody>
+            <tr>
+              <th scope="row" style="font-size: 20px;text-align: center">I only know that John will help me today.</th>
+              <td><input type="checkbox" id="Q9_Sentence1"></td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-size: 20px;text-align: center">When dogs were in the room, the cat always hid under the bed.</th>
+              <td style="padding-right: 200px;"><input type="checkbox" id="Q9_Sentence2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- َQ10 -->
+    <div align="center" id="Q10-Contents">
+      <div class="col-10" align="center" style="font-size: 30px">Named Animals more than 11.
+        <input type="checkbox" id="Q10_mark">
+      </div>
+    </div>
+    
+    <!-- َQ11 -->
+    <div align="center" id="Q11-Contents">
+      <table class="table table-primary">
+        <tbody>
+          <tr>
+            <td style="font-size: 30px;text-align: center"><b>Train - Bicycle</b></td>
+            <td><input type="checkbox" id="Q11_1stSimilarity"></td>
+            <td style="font-size: 30px;text-align: center"><b>Watch - Ruler</b></td>
+            <td><input type="checkbox" id="Q11_2ndSimilarity"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- َQ12 -->
+    <div align="center" id="Q12-Contents">
+      <table class="table table-primary">
+        <!-- the question needs a table, with 2 rows of checkboxes for each word column-->
+        <thead>
+          <tr> <!-- Set words in column-->
+            <th scope="col"></th>
+            <th scope="col">Face</th>
+            <th scope="col">Silk</th>
+            <th scope="col">Church</th>
+            <th scope="col">Rose</th>
+            <th scope="col">Red</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> <!-- first checkboxes row-->
+            <th scope="row">No Cues</th>
+            <td><input type="checkbox" id="Q12_1stWord"></td>
+            <td><input type="checkbox" id="Q12_2ndWord"></td>
+            <td><input type="checkbox" id="Q12_3rdWord"></td>
+            <td><input type="checkbox" id="Q12_4thWord"></td>
+            <td><input type="checkbox" id="Q12_5thWord"></td>
+          </tr>
+          <tr>
+            <td style="padding-top: 40px;"><b>Optional</b></td>
+          </tr>
+          <tr> <!-- second checkboxes row-->
+            <th scope="row">Category cue</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr> <!-- third checkboxes row-->
+            <th scope="row">Multiple choice cue</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <th><br></th>
+          </tr>
+          <tr>
+            <th scope="row">Category cue:</th>
+            <td>Part of the body</td>
+            <td>Type of fabric</td>
+            <td>Type of building</td>
+            <td>Type of flower</td>
+            <td>Type of colour</td>
+          </tr>
+          <tr>
+            <th scope="row">Multiple Choice:</th>
+            <td>Nose, Face, Hand</td>
+            <td>Denim, Cotton, Silk</td>
+            <td>Church,School,Hospital</td>
+            <td>Daisy, Rose, Tulip</td>
+            <td>Red, Blue, Green</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- َQ13 -->
+    <div align="center" id="Q13-Contents">
+      <table class="table table-primary">
+        <tbody>
+          <tr>
+            <td style="font-size: 30px;text-align: center"><b>Date</b></td>
+            <td><input type="checkbox" id="Q13_date"></td>
+            <td style="font-size: 30px;text-align: center"><b>Month</b></td>
+            <td><input type="checkbox" id="Q13_month"></td>
+            <td style="font-size: 30px;text-align: center"><b>Year</b></td>
+            <td><input type="checkbox" id="Q13_year"></td>
+            <td style="font-size: 30px;text-align: center"><b>Day</b></td>
+            <td><input type="checkbox" id="Q13_day"></td>
+            <td style="font-size: 30px;text-align: center"><b>Place</b></td>
+            <td><input type="checkbox" id="Q13_place"></td>
+            <td style="font-size: 30px;text-align: center"><b>Country</b></td>
+            <td><input type="checkbox" id="Q13_country"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>setQuestion(13);</script> 
   </div>
 </div>
 </body>
