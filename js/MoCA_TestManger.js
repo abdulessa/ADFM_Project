@@ -34,7 +34,14 @@ function showQuestionContents(question_number) {
 	$("#Q" + question_number + "-Contents").removeClass("hidden");
 }
 
-function submit_to_DB() {}
+function submit_to_result() {
+	var result_submit = {
+		Scores: Scores,
+		Test_Data: Test_Data,
+	};
+	window.name = result_submit;
+	window.location.href = "test_results.php";
+}
 
 // applies certain parameters to the question  
 function applyQuestion(type, progress, title, points, question_number) {

@@ -306,3 +306,6 @@
 
 })(jQuery);
 
+function send_message( message){
+	alert(message);
+}

@@ -1,68 +1,65 @@
 <?php
-	//Connect with MYSQL
-	$host = "localhost";
-	$user = "root";
-	$password = "";
-	$database = "adfm";
+//Connect with MYSQL
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "adfm";
 
-	$con = mysqli_connect($host, $user, $password, $database) or die("Cant connect");
-	mysqli_select_db($con,$database) or die ("Database not found");
+$con = mysqli_connect( $host, $user, $password, $database )or die( "Cant connect" );
+mysqli_select_db( $con, $database )or die( "Database not found" );
 
-	if (isset($_POST['insert'])){
+if ( isset( $_POST[ 'insert' ] ) ) {
 
-		 $GLOBALS['username'] =$_POST['Username'];
+	$GLOBALS[ 'username' ] = $_POST[ 'Username' ];
 
-		 $GLOBALS['email'] = $_POST['email'];
+	$GLOBALS[ 'email' ] = $_POST[ 'email' ];
 
-		 $GLOBALS['password'] = $_POST['password'];
+	$GLOBALS[ 'password' ] = $_POST[ 'password' ];
 
 
-$sql = "INSERT INTO supervisor_db (username, email, password) VALUES ('$username','$email','$password')";
+	$sql = "INSERT INTO supervisor_db (username, email, password) VALUES ('$username','$email','$password')";
 
-		if(empty($username)){
-				echo "Username is not inserted";
-				header("refresh:1; url=index.html");
-		}
-		elseif(mysqli_query($con, $sql)){
-			header("Location:index.html");
-		}
-		else{
-			echo "Failed to save";
-
-		}
+	if ( empty( $username ) ) {
+		echo "Username is not inserted";
+		header( "refresh:1; url=index.html" );
+	} elseif ( mysqli_query( $con, $sql ) ) {
+		header( "Location:index.html" );
 	}
+	else {
+		echo "Failed to save";
+
+	}
+}
 
 
-	if (isset($_POST['submitnew'])){
+if ( isset( $_POST[ 'submit_new_patient' ] ) ) {
 
-		 $GLOBALS['name'] =$_POST['name'];
-		 $GLOBALS['gender'] =$_POST['gender'];
-		 $GLOBALS['age'] = $_POST['age'];
-		 $GLOBALS['education'] = $_POST['education'];
-		 $GLOBALS['residence'] = $_POST['residence'];
-		 $GLOBALS['job'] = $_POST['work'];
-		 $GLOBALS['children'] = $_POST['children'];
-		 $GLOBALS['ethnicity'] = $_POST['ethnicity'];
-		 $GLOBALS['languages'] = $_POST['languages'];
-		 $GLOBALS['workplace'] = $_POST['workplace'];
+	$name = $_POST[ 'name' ];
+	$gender = $_POST[ 'gender' ];
+	$age = $_POST[ 'age' ];
+	$education = $_POST[ 'education' ];
+	$residence = $_POST[ 'residence' ];
+	$job = $_POST[ 'job' ];
+	$children = $_POST[ 'children' ];
+	$ethnicity = $_POST[ 'ethnicity' ];
+	$languages = $_POST[ 'languages' ];
+	$workplace = $_POST[ 'workplace' ];
 
 
-$sql = "INSERT INTO patient_form (name, gender, age, education, residence,
+	$sql = "INSERT INTO patient_form (name, gender, age, education, residence,
 	job, children, ethnicity, languages, workplace)
  VALUES ('$name','$gender','$age', '$education', '$residence',
 	'$job', '$children', '$ethnicity', '$languages', '$workplace' )";
 
-		if(empty($name)){
-				echo "Username is not inserted";
-				header("refresh:1; url=home.html");
-		}
-		elseif(mysqli_query($con, $sql)){
-			header("Location:home.html");
-		}
-		else{
-			echo "Failed to save";
-
-		}
+	if ( empty( $name ) ) {
+		echo "Username is not inserted";
+		header( "refresh:1; url=home.html" );
+	} elseif ( mysqli_query( $con, $sql ) ) {
+		header( "Location:home.html" );
 	}
-
+	else {
+		echo "Error: " . $sql . "<br>" . $con->error;
+	}
+}
+$con->close();
 ?>

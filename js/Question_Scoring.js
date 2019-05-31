@@ -15,7 +15,7 @@ var Scores = {
 	Question_11: null,
 	Question_12: null,
 	Question_13: null,
-	total: null;
+	total: null
 };
 
 // function to handle next button logic and submission to server
@@ -84,9 +84,9 @@ function submit_answer(question) {
 		case 13:
 			if (Scores.Question_13 == null) {
 				Scores.Question_13 = validate_Q13();
-				Test_Data.end_time = Date.getTime();
+				Test_Data.end_time = new Date().getTime();
 				// submission to DB here
-				submit_to_DB();
+				submit_to_result();
 			}
 			break;
 		default:

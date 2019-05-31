@@ -14,75 +14,69 @@
     <!-- <label for="toggle">&#9776;</label>
               <input type="checkbox" id="toggle"/> -->
     <ul class="menu">
-      <li class="nav-item  active"><a href="index.html">HOME</a></li>
-      <li class="nav-item"><a href="start_assessment.html">COGNITIVE ASSESSMENT</a></li>
-      <li class="nav-item"><a href="about.html">ABOUT</a></li>
-      <li class="nav-item"><a href="patient_form.html">NEW PATIENT</a></li>
-      <li class="nav-item"><a href="contact.html">CONTACT</a></li>
-      <li class="nav-item1"><a href="register.html" class="signup"> <span>Sign out</span> </a></li>
+      <li class="nav-item  active"><a href="home.html">HOME</a></li>
+      <li class="nav-item"><a href="start_assessment.php">COGNITIVE ASSESSMENT</a></li>
+      <li class="nav-item"><a href="#">NEW PATIENT</a></li>
+      <li class="nav-item1"><a href="index.html" class="signup"> <span>Sign out</span> </a></li>
     </ul>
-    </div>
   </nav>
 </header>
 <div id="container">
   <div class="form-wrap">
-  <h1>Registering new patient</h1>
-  <p>it takes a minute</p>
-  <form action="process.php" method="post">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" name ="name"  placeholder="enter your full ame">
-    </div>
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="number" id="age" name="age" placeholder="Enter your Age">
-    </div>
-    <div class="form-group"> 
-      <!-- dropdown 1 -->
-      <label for="Education">Education</label>
-      <input type="text" id="education" name="education" placeholder="enter level of education (e.g secondary)">
-    </div>
-    <div class="form-group"> 
-      <!-- dropdown 2 -->
-      <label for="gender">Gender</label>
-      <select name="gender" id="gender" name="gender">
-      <option value="male">Male</option>
-      <option value="male">Female</option>
-      <option value="male">Other</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="work">Ethnicity </label>
-      <input type="text" id="ethnicity" name="ethnicity" placeholder="What is your ethnicity?">
-    </div>
-    <div class="form-group">
-      <label for="work">Job </label>
-      <input type="text" id="work" name="work" placeholder="enter your job Name (e.g mechanic)">
-    </div>
-    <div class="form-group">
-      <label for="workplace">Work Place </label>
-      <input type="text" id="workplace" name="workplace" placeholder="enter your job Location(e.g singapore)">
-    </div>
-    <div class="form-group">
-      <label for="children">Children </label>
-      <input type="number" id="children" name="children" placeholder="enter no: of children (e.g 3)">
-    </div>
-    <div class="form-group">
-      <label for="residence">Residence </label>
-      <input type="text" id="residence" name="residence" placeholder="Enter your residence (e.g petaling jaya)">
-    </div>
-    <div class="form-group">
-      <label for="languages">Languages </label>
-      <input type="text" id="languages" name="languages" placeholder="enter the languages (e.g: chinese, english)">
-    </div>
-    <input type="submit" class="btn" name="submitnew" value="Submit & Proceed to Part B" action = "list.html">
-    <button type="reset" class="rst">Reset</button>
-    <p class="bottom-text"> By clicking the Submit button, You agree to our <a href="#">Terms and conditions</a> and <a href="#">Privacy Policy</a> </p>
-    </div>
-  </form>
-  <footer>
-    <p>Already have an account? <a href="login.html">Login Here</a></p>
-  </footer>
+    <h1>Registering new patient</h1>
+    <p>it takes a minute</p>
+    <form action="process.php" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name ="name"  placeholder="enter your full ame">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age">
+      </div>
+      <div class="form-group"> 
+        <!-- dropdown 1 -->
+        <label for="education">Education</label>
+        <input type="text" id="education" name="education" placeholder="enter level of education (e.g secondary)">
+      </div>
+      <div class="form-group"> 
+        <!-- dropdown 2 -->
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="male">Female</option>
+          <option value="male">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="ethnicity">Ethnicity </label>
+        <input type="text" id="ethnicity" name="ethnicity" placeholder="What is your ethnicity?">
+      </div>
+      <div class="form-group">
+        <label for="job">Job </label>
+        <input type="text" id="job" name="job" placeholder="enter your job Name (e.g mechanic)">
+      </div>
+      <div class="form-group">
+        <label for="workplace">Work Place </label>
+        <input type="text" id="workplace" name="workplace" placeholder="enter your job Location(e.g singapore)">
+      </div>
+      <div class="form-group">
+        <label for="children">Children </label>
+        <input type="number" id="children" name="children" placeholder="enter no: of children (e.g 3)">
+      </div>
+      <div class="form-group">
+        <label for="residence">Residence </label>
+        <input type="text" id="residence" name="residence" placeholder="Enter your residence (e.g petaling jaya)">
+      </div>
+      <div class="form-group">
+        <label for="languages">Languages </label>
+        <input type="text" id="languages" name="languages" placeholder="enter the languages (e.g: chinese, english)">
+      </div>
+      <input type="submit" class="btn" name="submit_new_patient" value="Submit & Proceed to Part B" action = "list.html">
+      <button type="reset" class="rst">Reset</button>
+      <p class="bottom-text"> By clicking the Submit button, You agree to our <a href="#">Terms and conditions</a> and <a href="#">Privacy Policy</a> </p>
+    </form>
+  </div>
 </div>
 </body>
 </html>

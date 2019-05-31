@@ -10,8 +10,6 @@ $con = mysqli_connect($host, $user, $password, $db) or die("Cant connect");
 
 $username = @$_POST['username'];
 $password = @$_POST['password'];
-
-
 $submitlog   = @$_POST['login'];
 $encpassword = md5($password);
 
