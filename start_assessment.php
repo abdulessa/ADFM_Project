@@ -34,7 +34,7 @@
 					</li>
 					<li class="nav-item"><a href="patient_form.html" class="nav-link">NEW PATIENT</a>
 					</li>
-					<li class="nav-item cta"><a href="register.html" class="nav-link"><span>SIGN UP!</span></a>
+					
 					</li>
 				</ul>
 			</div>

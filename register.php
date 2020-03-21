@@ -31,6 +31,7 @@
 	function hideURLbar() {
 	window.scrollTo(0, 1);
 	}
+	
 	</script>
 	<!-- Custom Theme files -->
 	<link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
@@ -68,8 +69,8 @@
       <div class="agileits-top">
         <form action="process.php" method="post">
           <input class="text" type="text" name="Username" placeholder="username" required="">
-          <input class="text email" type="email" name="email" placeholder="Email" required="">
-          <input class="text" type="password" name="password" placeholder="Password" required="">
+          <input class="text email" type="email" name="email2"  placeholder="EMAIL" required="">
+          <input class="text w3lpass" type="password" name="password" placeholder="Password" required="">
           <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
           <div class="wthree-text">
             <label class="anim">
@@ -93,8 +94,9 @@
 
     </ul>
   </div>
-  <!-- //main
-/*	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -134,7 +136,7 @@
 			});
 
 		});
-	</script>*/ -->
+	</script>
 </body>
 
 </html>
